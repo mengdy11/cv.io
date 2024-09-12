@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        /* Universal styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0; /* Ensure body takes full height */
+            font-weight: 400; /* Regular weight for body text */
+        }
+
+        /* Container styles */
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            height: 100vh;
+            max-width: none;
+            max-height: none;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Left section styles */
+        .left-section {
+            width: 35%;
+            background-color: #1c1c1c;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distributes space between children */
+        }
+
+        .left-section .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers the image horizontally */
+            text-align: center; /* Centers text if any */
+            margin-top: auto; /* Pushes the profile section to the bottom */
+        }
+
+        .left-section .profile img {
+            width: 100%;
+            max-width: 150px; /* Limit the width if necessary */
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .left-section .profile h1 {
+            font-size: 24px;
+            font-weight: 700; /* Bold weight for profile name */
+        }
+
+        .left-section .subtitle {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ccc; /* Lighter color for subtitle */
+        }
+
+        .left-section .contact-info p,
+        .left-section .skills ul,
+        .left-section .education p,
+        .left-section .languages p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .left-section h2 {
+            border-bottom: 2px solid #fff;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 700; /* Bold weight for section headings */
+        }
+
+        /* Right section styles */
+        .right-section {
+            width: 65%;
+            padding: 20px;
+            overflow: auto; /* Allows scrolling if content overflows */
+        }
+
+        .right-section h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-weight: 700; /* Bold weight for section headings */
+        }
+
+        .right-section .experience .job {
+            margin-bottom: 20px;
+        }
+
+        .right-section .experience h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 700; /* Bold weight for job titles */
+        }
+
+        .right-section .experience p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .right-section .experience p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .left-section, .right-section {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .container {
+                flex-direction: column;
+                width: 100%;
+                height: 100vh; /* Ensure full height on smaller screens */
+            }
+        }
+
+        /* Accessibility styles */
+        a:focus, button:focus {
+            outline: 2px solid #007bff; /* Blue outline for focused elements */
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="profile">
+                <img src="../img/mengdy.jpg" alt="Profile Picture">
+                <h1>HOENG MENG DY</h1>
+                <p class="subtitle">Student</p>
+            </div>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> 015-663-024</p>
+                <p><strong>Email:</strong> mengdy412@gmail.com</p>
+                <p><strong>Location:</strong> Phnom Penh</p>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Web Design</li>
+                    <li>Design Thinking</li>
+                    <li>Wireframe Creation</li>
+                </ul>
+            </div>
+            <div class="education">
+                <h2>Education</h2>
+                <p><strong>Secondary School:</strong> FRA High School (2014-2017)</p>
+                <p><strong>Bachelor of Technology:</strong> Beltei International University (2024)</p>
+            </div>
+            <div class="languages">
+                <h2>Languages</h2>
+                <p>Khmer</p>
+                <p>English</p>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="experience">
+                <h2>Experience</h2>
+                <div class="job">
+                    <h3>Intern - Web Developer</h3>
+                    <p><strong>Company:</strong> ABC Tech</p>
+                    <p><strong>Duration:</strong> June 2023 - August 2023</p>
+                    <p>Assisted in designing and developing website features, contributed to UI/UX design improvements, and conducted testing and debugging.</p>
+                </div>
+                <div class="job">
+                    <h3>Freelance Web Designer</h3>
+                    <p><strong>Clients:</strong> Various</p>
+                    <p><strong>Duration:</strong> January 2022 - Present</p>
+                    <p>Designed and developed websites for various clients, focusing on user experience and responsive design. Created wireframes and prototypes for client approval.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
